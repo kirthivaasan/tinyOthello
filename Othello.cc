@@ -62,9 +62,9 @@ bool Othello::flipHelper(int player, int row, int col, int d_row, int d_col, boo
 	row += d_row;
 	col += d_col;
 	int current = board[row][col];
-	if (!inBounds(row, col) || current == 0) 		return false;					   // current is out of bounds or blank
-	if (current == player && !playerNeighbourCheck)	return true; 					   // current is player piece but not original player pos
-	if (current == -1 * player && flipHelper(player, row, col, d_row, d_col, false)) { // current has to be opp piece, call flipHelper.
+	if (!inBounds(row, col) || current == 0)		return false;						// current is out of bounds or blank
+	if (current == player && !playerNeighbourCheck)	return true;						// current is player piece but not original player pos
+	if (current == -1 * player && flipHelper(player, row, col, d_row, d_col, false)) {	// current has to be opp piece, call flipHelper.
 		board[row][col] = player;
 		return true;
 	}
