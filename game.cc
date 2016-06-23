@@ -41,11 +41,11 @@ int main() {
 				if (ai) {
 					if (!othello_game.ai(-1 * player)) 
 						message = "Computer could not find a move."; 
-					else
-						player *= -1;
 				} else {
-					message = "That move does not flip any pieces / Coordinates out of bound.";
+						player *= -1;
 				}
+			} else {
+					message = "That move does not flip any pieces / Coordinates out of bound.";
 			}
 		}			
 	} while (col != "quit" && col != "exit");
