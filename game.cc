@@ -43,8 +43,9 @@ int main() {
 						message = "Computer could not find a move."; 
 					else
 						player *= -1;
-			} else {
-				message = "That move does not flip any pieces / Coordinates out of bound.";
+				} else {
+					message = "That move does not flip any pieces / Coordinates out of bound.";
+				}
 			}
 		}			
 	} while (col != "quit" && col != "exit");
