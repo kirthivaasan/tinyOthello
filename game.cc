@@ -1,7 +1,6 @@
 /**
     @author Kirthivaasan Puniamurthy
 */
-
 #include <iostream>
 #include <cstdlib>
 #include "Othello.cc"
@@ -9,8 +8,7 @@
 int main() {
 	Othello othello_game;
 	int player = 1; // 1 = 'X', -1 = 'O'
-	std::string row, col;
-	std::string message = "Welcome to othello.";
+	std::string row, col, message = "Welcome to othello.";
 	int x = 0;
 	int o = 0;
 	bool ai = false; // default is no ai.
@@ -20,8 +18,7 @@ int main() {
 		othello_game.getScore(x, o);
 		std::cout << " Current player: " << othello_game.intToPlayer(player) << "\n X = " << x << " O = " << o 
 				<< std::endl << " " << message << std::endl << " >> ";
-		std::cin >> col;
-		
+		std::cin >> col;	
 		if (col == "ai" && !ai) {
 			ai = true;
 			player *= -1;
