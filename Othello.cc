@@ -39,11 +39,9 @@ class Othello {
 		}
 	private:
 		bool makeMove(int player,int col, int row) {
-			if ( inBounds(row, col) && board[row][col] == 0) { // check bounds and if spot is empty.
-				if (flip(player, row, col) ) {
-					board[row][col] = player;
-					return true;
-				}
+			if (inBounds(row, col) && board[row][col] == 0 && flip(player, row, col) ) {
+				board[row][col] = player;
+				return true;
 			}
 			return false;
 		}
